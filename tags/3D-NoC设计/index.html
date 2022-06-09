@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>wangshaocong&#39;s blog</title>
+  <title>Tag: 3D-NoC设计 | wangshaocong&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="wangshaocong&#39;s blog">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/tags/3D-NoC%E8%AE%BE%E8%AE%A1/index.html">
 <meta property="og:site_name" content="wangshaocong&#39;s blog">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
@@ -140,137 +140,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-基于应用驱动的mesh片上网络路由" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/06/09/%E5%9F%BA%E4%BA%8E%E5%BA%94%E7%94%A8%E9%A9%B1%E5%8A%A8%E7%9A%84mesh%E7%89%87%E4%B8%8A%E7%BD%91%E7%BB%9C%E8%B7%AF%E7%94%B1/">基于应用驱动的mesh片上网络路由</a>
-    </h1>
-  
-
-        
-        <a href="/2022/06/09/%E5%9F%BA%E4%BA%8E%E5%BA%94%E7%94%A8%E9%A9%B1%E5%8A%A8%E7%9A%84mesh%E7%89%87%E4%B8%8A%E7%BD%91%E7%BB%9C%E8%B7%AF%E7%94%B1/" class="archive-article-date">
-  	<time datetime="2022-06-09T02:23:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-09</time>
-</a>
-        
-      </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="基于网状网络的片上网络架构的应用驱动路由"><a href="#基于网状网络的片上网络架构的应用驱动路由" class="headerlink" title="基于网状网络的片上网络架构的应用驱动路由"></a>基于网状网络的片上网络架构的应用驱动路由</h1><h2 id="Application-driven-routing-for-mesh-based-Network-on-Chip-architectures"><a href="#Application-driven-routing-for-mesh-based-Network-on-Chip-architectures" class="headerlink" title="Application driven routing for mesh based Network-on-Chip architectures."></a>Application driven routing for mesh based Network-on-Chip architectures.</h2><p>发表年份：2022<br>发表期刊：Elsevier Integration<br>原文链接：<a target="_blank" rel="noopener" href="https://www-sciencedirect-com-s.nudtproxy.yitlink.com/science/article/pii/S0167926021001346?via=ihub#b30">应用驱动设计NoC路由</a></p>
-<h3 id="Highlight"><a href="#Highlight" class="headerlink" title="Highlight"></a>Highlight</h3><ul>
-<li><p>每个应用流量对片上网络的性能参数都有明显的影响。</p>
-</li>
-<li><p>两个不同的应用程序在针对 NoC 中的相同路由算法的特定目标时，可能不会表现出相同的性能。</p>
-</li>
-<li><p>必须考虑针对 NoC 体系结构的应用程序驱动的动态路由方案，而不是预先确定的路由策略。此外，应编排路由体系结构以支持动态路由方案。</p>
-</li>
-<li><p>采用的方法： </p>
-<blockquote>
-<blockquote>
-<ol>
-<li>评估不同路由算法的 NoC 性能度量 - 流量分析。</li>
-<li>确定给定应用程序的最佳路由策略 - 应用程序路由映射。</li>
-<li>实现动态路由的实现 - 可重新配置的路由表。</li>
-<li>提出对未知应用程序流量进行分类，并预测其最佳路由算法。</li>
-<li>基于ML的未知流量路由预测。</li>
-</ol>
-</blockquote>
-</blockquote>
-</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>作者提出做路由决策时需要考虑应用程序的性质，即在不同的应用程序下使用不同的路由算法性能会有所差异。因此先通过实验得出结论（流量分析），再确定给定应用程序的最佳路由策略（应用程序路由映射）</p>
-<h2 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h2><p>通过在10x10 mesh上NoC上使用不同代表性基准测试应用（如MPEG，VOPD等）进行实验。实验结果表明相同的路由算法对不同应用的不同性能参数的影响不同。同时对于相同的应用，没有固定的路由方案可以最好地用于不同的性能参数。（这里的性能参数是指吞吐量，延迟，能耗等）<br>因此，作者觉得必须考虑 NoC 体系结构的应用程序驱动的动态路由方案，而不是预先确定的路由策略。并提出相应的路由器体系结构来支持动态路由方案</p>
-<h2 id="传统路由"><a href="#传统路由" class="headerlink" title="传统路由"></a>传统路由</h2><p>作者提出：现有的不同类别的NoC路由算法已经提出了很多。这些算法是针对特定网络性能度量作为目标而设计的。<br>如果目标是实现最短的路由路径长度，则确定性 NoC 路由算法可提供最佳结果。这些算法使用静态路由路径（如 XY 路由）。但是，由于确定性路由算法遵循静态路由方法，因此在网络中出现死锁或拥塞时，它们无法提供备用路径。<br>遗忘路由与确定性路由类似，只是路由方向的选择忽略了网络中的拥塞，即在选择网络路径将Flit从源传输到目的地时，它不考虑网络的拥塞状态。遗忘路由包括许多路由模型，如转弯模型、泛洪算法等，能避免沿网络路径的死锁。确定性和遗忘路由的局限性之一是，它们只强调一对发送方和接收方的路由路径，而忽略了网络的当前流量状况，例如拥塞，这可能导致数据包传递期间发生高延迟。<br>自适应路由策略解决了此问题，其中路由路径根据网络的拥塞状态确定。<br>当系统中存在高网络过载时，自适应算法更有用。但是，对于某些应用程序流量，确定性算法可以优于自适应算法。</p>
-<p>相关工作的研究差距：基于NoC的路由技术和体系结构侧重于特定的NoC性能度量，并使用特定的路由策略来实现目标。其中许多路由技术本质上是静态的，并且不考虑应用程序流量模式的变化。这是不可取的，因为同一应用程序流量的行为不同，并且对于不同的路由算法表现出不同的性能度量。</p>
-<h2 id="流量分析"><a href="#流量分析" class="headerlink" title="流量分析"></a>流量分析</h2><p><img src="https://s3.bmp.ovh/imgs/2022/06/09/d27512b918f834b2.jpg" alt="图1"><br><img src="https://s3.bmp.ovh/imgs/2022/06/09/02322d792c94faf6.jpg" alt="图2"><br>例如，当执行 MPEG 流量（如图 1 所示）时，DYAD 路由算法提供比所有其他路由算法更高的吞吐量，而当考虑 VOPD（视频对象平面解码器）流量（如图 2 所示）时，XY 路由算法产生最佳吞吐量结果。这些结果清楚地表明，在为NoC选择路由算法时，不可能有适合所有人的解决方案。为不同的应用程序流量分配相同的路由算法无法提供最佳性能。因此，对于特定NoC中的各种流量，固定路由方案是不可取的。<br>上面两个图突出显示了不同流量的性能测量变化。<br>下面两个图<br><img src="https://s3.bmp.ovh/imgs/2022/06/09/90ba40119bf0c77f.jpg" alt="图3"><br><img src="https://s3.bmp.ovh/imgs/2022/06/09/f3f2151356a2da73.jpg" alt="图4"><br>对于相同的网络流量，WEST-FIRST 路由算法提供高吞吐量，如图 3 所示。但是，如果要求是功耗更低，则 NORTH-LAST 路由算法将产生最佳结果，如图 4 所示。因此，没有独特的路由算法可以为同一应用程序流量的所有性能参数（如延迟、吞吐量和能耗）提供最佳值。</p>
-<p>得出的这些结论启发作者提出了一种应用驱动的动态路由算法选择过程，以决定与NoC的性能参数相对应的最佳路由算法。</p>
-<h2 id="应用路由映射技术及其实现"><a href="#应用路由映射技术及其实现" class="headerlink" title="应用路由映射技术及其实现"></a>应用路由映射技术及其实现</h2><p>作者介绍一种方法，该方法针对特定的性能参数为给定的应用程序流量选择合适的路由算法，并且每次在应用程序流量更改或所需的性能参数更改时选择不同的路由算法。<br>该方法涉及三个步骤过程：首先，分析应用程序流量以获取列出应用程序流量 - 路由算法 - NoC网络性能参数的表。其次，使用第一步的表内容来决定特定目标（网络性能参数）的最佳路由算法。第三，更新路由表，实现对应应用流量的路由算法。</p>
-<h3 id="第-1-阶段：流量分析和性能参数映射"><a href="#第-1-阶段：流量分析和性能参数映射" class="headerlink" title="第 1 阶段：流量分析和性能参数映射"></a>第 1 阶段：流量分析和性能参数映射</h3>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
+    
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">NoC路由</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/06/09/%E5%9F%BA%E4%BA%8E%E5%BA%94%E7%94%A8%E9%A9%B1%E5%8A%A8%E7%9A%84mesh%E7%89%87%E4%B8%8A%E7%BD%91%E7%BB%9C%E8%B7%AF%E7%94%B1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2022" class="archive-year">2022</a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-3D片上网络设计（小世界）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+        <div class="archives">
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/06/08/3D%E7%89%87%E4%B8%8A%E7%BD%91%E7%BB%9C%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%B0%8F%E4%B8%96%E7%95%8C%EF%BC%89/">3D片上网络设计（小世界）</a>
-    </h1>
-  
-
-        
-        <a href="/2022/06/08/3D%E7%89%87%E4%B8%8A%E7%BD%91%E7%BB%9C%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%B0%8F%E4%B8%96%E7%95%8C%EF%BC%89/" class="archive-article-date">
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/06/08/3D%E7%89%87%E4%B8%8A%E7%BD%91%E7%BB%9C%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%B0%8F%E4%B8%96%E7%95%8C%EF%BC%89/" class="archive-article-date">
   	<time datetime="2022-06-08T08:08:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-08</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="设计-空间探索与优化高能效、高可靠的小世界片上网络"><a href="#设计-空间探索与优化高能效、高可靠的小世界片上网络" class="headerlink" title="设计-空间探索与优化高能效、高可靠的小世界片上网络"></a>设计-空间探索与优化高能效、高可靠的小世界片上网络</h1><p>Design-Space Exploration and Optimization of an Energy-Efficient and Reliable 3-D Small-World Network-on-Chip</p>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/06/08/3D%E7%89%87%E4%B8%8A%E7%BD%91%E7%BB%9C%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%B0%8F%E4%B8%96%E7%95%8C%EF%BC%89/">3D片上网络设计（小世界）</a>
+    </h1>
+  
 
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -282,123 +179,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/06/08/3D%E7%89%87%E4%B8%8A%E7%BD%91%E7%BB%9C%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%B0%8F%E4%B8%96%E7%95%8C%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-基于强化学习的容错路由和FPGA实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/06/08/%E5%9F%BA%E4%BA%8E%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%AE%B9%E9%94%99%E8%B7%AF%E7%94%B1%E5%92%8CFPGA%E5%AE%9E%E7%8E%B0/">基于强化学习的容错路由和FPGA实现</a>
-    </h1>
-  
-
-        
-        <a href="/2022/06/08/%E5%9F%BA%E4%BA%8E%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%AE%B9%E9%94%99%E8%B7%AF%E7%94%B1%E5%92%8CFPGA%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
-  	<time datetime="2022-06-08T02:27:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="基于强化学习的基于网格的NoC容错路由算法及其FPGA实现"><a href="#基于强化学习的基于网格的NoC容错路由算法及其FPGA实现" class="headerlink" title="基于强化学习的基于网格的NoC容错路由算法及其FPGA实现"></a>基于强化学习的基于网格的NoC容错路由算法及其FPGA实现</h1><p>发表年份：2022<br>发表期刊：IEEE Access<br>期刊论文链接：<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/9760423">Reinforcement Learning Based Fault-Tolerant Routing Algorithm for Mesh Based NoC and Its FPGA Implementation</a><br>属于会议扩展工作，会议版发表在2020-VDAT-Fault-Tolerant Routing Algorithm for Mesh based NoC using Reinforcement Learning<br>会议论文链接：<a target="_blank" rel="noopener" href="https://ieeexplore-ieee-org-s.nudtproxy.yitlink.com/document/9190340/authors#authors">2020-VDAT</a><br>增加了基于FPGA的实现</p>
-<p>总的来说就是一篇水文，没啥价值，怎么判断错误故障啥的都没怎么说</p>
-<p>主要是想要借鉴一下FPGA实现的实验，结果这个实验感觉也是水，没什么实质性的内容。</p>
-<h4 id="综述："><a href="#综述：" class="headerlink" title="综述："></a>综述：</h4><p>本文提出了一种基于强化学习的容错路由（RL-FTR），用来解决基于mesh拓扑NoC中的链路故障以及路由器故障。RL-FTR算法使用多智能体强化学习（MARL）寻找源路由器到目标路由器的最佳路径。最后在FPGA上实现了RL-FTR算法，并分析了资源利用率以及功耗。</p>
-<h2 id="容错"><a href="#容错" class="headerlink" title="容错"></a>容错</h2><p>NoC为了满足更多处理元件（PE）或内核的要求，从而实现高开关活动和散热。因此，网络组件可能会出现故障。网络组件的故障会对系统的性能和可靠性产生负面影响。因此，为了提高可靠性和效率，NoC需要容错方法来处理故障。</p>
-<h2 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h2><p>传统的容错路由算法或最短路径路由算法根据预定义的规则做出决策。此外，数据包始终在到达目的地的路径中通过同一节点，因为缺乏智能，这会产生拥塞和排队问题。这些规则是根据程序员观察到的频繁发生的路由问题由用户定义的，并且在每个新场景中，都需要人工干预来更新规则。但是，随着路由问题数量的增加，定义新规则的需求增加以准确解决所有路由问题，从而导致效率或准确性的损失。在机器学习（ML）中，算法被编程为学习执行任务。在学习过程中，ML算法获取不同路由场景的知识，有助于高效、准确地处理复杂情况。</p>
-<h2 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h2><p>使用强化学习Q-learning，Q表存储每个路由器端口的Q值，Q值越大就代表选择的可能性越大。这期刊中的工作中使用了Cluster表来减少开销，在4x4的mesh中每4个路由器为一组<img src="https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/6287639/9668973/9760423/cenke5-3168992-large.gif" alt="dd"></p>
-<h2 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h2><p>实验平台是不详细，基于system—C的周期精确NoC模拟器（没听过）</p>
-<p>主要看FPGA实现部分<br>西八，感觉没啥好看的，也没写详细</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">NoC容错</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/06/08/%E5%9F%BA%E4%BA%8E%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%AE%B9%E9%94%99%E8%B7%AF%E7%94%B1%E5%92%8CFPGA%E5%AE%9E%E7%8E%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -420,10 +213,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
